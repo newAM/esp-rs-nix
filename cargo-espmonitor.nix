@@ -1,0 +1,24 @@
+{ lib
+, rustPlatform
+, espmonitor
+}:
+
+let
+  cargoToml = lib.importTOML "${espmonitor}/cargo-espmonitor/Cargo.toml";
+in
+rustPlatform.buildRustPackage {
+  pname = cargoToml.package.name;
+  inherit (cargoToml.package) version;
+
+  src = espmonitor;
+
+  buildAndTestSubdir = "cargo-espmonitor";
+
+  cargoLock.lockFile = "${espmonitor}/Cargo.lock";
+
+  meta = with lib; {
+    inherit (cargoToml.package) description;
+    homepage = cargoToml.package.repository;
+    licenses = with licenses; [ gpl3 ];
+  };
+}
