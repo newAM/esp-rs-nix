@@ -23,6 +23,7 @@ stdenv.mkDerivation rec {
   cmakeFlags = [
     "-DLLVM_ENABLE_PROJECTS='clang'"
     "-DLLVM_INSTALL_UTILS=ON"
+    "-DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD='Xtensa'"
   ];
 
   meta = with lib; {
