@@ -4,8 +4,6 @@
 
 This packages tools from [esp-rs] with [nix].
 
-If I end up using these tools long-term I will upstream this to the [nixpkgs repository].
-
 ## Tools
 
 * [`cargo-espflash`](https://github.com/esp-rs/espflash)
@@ -19,6 +17,11 @@ If I end up using these tools long-term I will upstream this to the [nixpkgs rep
 1. [Install NixOS or nixpkgs](https://nixos.org/download.html)
 2. Enable [nix flakes](https://nixos.wiki/wiki/Flakes)
 3. Run a tool, e.g. `nix run github:newam/esp-rs-nix#espflash`
+
+## ToDo
+
+* Package esp-rs compiler fork
+* Create a devshell that can compile the hello world
 
 ## References
 

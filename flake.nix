@@ -14,6 +14,10 @@
       url = "github:ivmarkov/embuild";
       flake = false;
     };
+    espressif-llvm-project = {
+      url = "github:espressif/llvm-project/xtensa_release_13.0.0";
+      flake = false;
+    };
   };
 
   outputs =
@@ -23,6 +27,7 @@
     , espflash
     , espmonitor
     , embuild
+    , espressif-llvm-project
     }:
     flake-utils.lib.eachDefaultSystem (system:
     let pkgs = nixpkgs.legacyPackages.${system}; in
@@ -33,6 +38,7 @@
         espflash = pkgs.callPackage ./espflash.nix { inherit espflash; };
         espmonitor = pkgs.callPackage ./espmonitor.nix { inherit espmonitor; };
         ldproxy = pkgs.callPackage ./ldproxy.nix { inherit embuild; };
+        llvm-xtensa = pkgs.callPackage ./llvm-xtensa.nix { inherit espressif-llvm-project; };
       };
       apps = {
         cargo-espflash = flake-utils.lib.mkApp { drv = packages.cargo-espflash; };

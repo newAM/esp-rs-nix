@@ -1,0 +1,112 @@
+{
+  "nodes": {
+    "embuild": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645385004,
+        "narHash": "sha256-3JpS6MsZGwFbPnS/V0jcPnT5ZGFD+xzyJuvPDbj3H+o=",
+        "owner": "ivmarkov",
+        "repo": "embuild",
+        "rev": "78babd2870576fca51de8cefb6b1f01d768a451c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ivmarkov",
+        "repo": "embuild",
+        "type": "github"
+      }
+    },
+    "espflash": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1647962145,
+        "narHash": "sha256-m2zB+02DwbbJq0db+pES2j3FO/cYLPqGfurQ7IiBkgM=",
+        "owner": "esp-rs",
+        "repo": "espflash",
+        "rev": "369dffda4a4289e360712239fb33dce0a6a5c241",
+        "type": "github"
+      },
+      "original": {
+        "owner": "esp-rs",
+        "repo": "espflash",
+        "type": "github"
+      }
+    },
+    "espmonitor": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1647630950,
+        "narHash": "sha256-XtygZcOwjaWlIV4R/xQD3RibiG3okYuW/4HrrUhYf0o=",
+        "owner": "esp-rs",
+        "repo": "espmonitor",
+        "rev": "15d10cf4ac37a2fca720089f7648736778647c59",
+        "type": "github"
+      },
+      "original": {
+        "owner": "esp-rs",
+        "repo": "espmonitor",
+        "type": "github"
+      }
+    },
+    "espressif-llvm-project": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1646861111,
+        "narHash": "sha256-sYP4MQSoo/yJbi6QlgJNBWbrzoazS4ZSl3iXwS/vDV4=",
+        "owner": "espressif",
+        "repo": "llvm-project",
+        "rev": "110fa852f368e880084b59c8893db1c09b1e994b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "espressif",
+        "ref": "xtensa_release_13.0.0",
+        "repo": "llvm-project",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1644229661,
+        "narHash": "sha256-1YdnJAsNy69bpcjuoKdOYQX0YxZBiCYZo4Twxerqv7k=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3cecb5b042f7f209c56ffd8371b2711a290ec797",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1647350163,
+        "narHash": "sha256-OcMI+PFEHTONthXuEQNddt16Ml7qGvanL3x8QOl2Aao=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3eb07eeafb52bcbf02ce800f032f18d666a9498d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "embuild": "embuild",
+        "espflash": "espflash",
+        "espmonitor": "espmonitor",
+        "espressif-llvm-project": "espressif-llvm-project",
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
